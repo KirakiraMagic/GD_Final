@@ -6,8 +6,10 @@ Short Description
 A stealth game where the main character must avoid infected monsters while hacking their mind to prevent themselves from being infected. They must sneak through a spaceship and gather ingredients to cure infected crewmates. 
 
 Storyboards
-
+![image](https://github.com/user-attachments/assets/ea3aaa9a-f61d-4294-95ca-769c0498840a)
+![image](https://github.com/user-attachments/assets/183e2e6c-0dc0-4cb4-a6ca-486a986e0fb6)
 <img width="443" alt="image" src="https://github.com/user-attachments/assets/c10e667a-3d66-4a02-ae6d-50c4272297e0">
+
 
 Inspirations
 Endoparasitic
