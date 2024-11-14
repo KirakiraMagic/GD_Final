@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://cimjpnw8okl5c"]
+
+[ext_resource type="Script" path="res://hack_puzzle.gd" id="1_vu56n"]
+[ext_resource type="PackedScene" uid="uid://dma1ql16dfsrq" path="res://hacking_tiles/1prongStarter.tscn" id="2_srnbb"]
+[ext_resource type="PackedScene" uid="uid://cx4r1b6pe4ujq" path="res://hacking_tiles/2prongStarter.tscn" id="3_33chw"]
+[ext_resource type="PackedScene" uid="uid://bawf8kmk7sgd" path="res://hacking_tiles/4prong2.tscn" id="4_bxneo"]
+[ext_resource type="PackedScene" uid="uid://bulge0g4k81vg" path="res://hacking_tiles/3prong2.tscn" id="5_anb8d"]
+[ext_resource type="PackedScene" uid="uid://r156hioky5tb" path="res://hacking_tiles/2prong2.tscn" id="6_rtpbo"]
+
+[node name="MediumHackingPuzzle2" type="Node2D"]
+position = Vector2(4, -12)
+script = ExtResource("1_vu56n")
+
+[node name="HackHexagon" parent="." instance=ExtResource("2_srnbb")]
+position = Vector2(121, 108)
+rotation = -1.04151
+
+[node name="HackHexagon2" parent="." instance=ExtResource("2_srnbb")]
+position = Vector2(281, 575)
+rotation = 2.10144
+
+[node name="HackHexagon3" parent="." instance=ExtResource("2_srnbb")]
+position = Vector2(444, 108)
+rotation = 1.03606
+
+[node name="HackHexagon4" parent="." instance=ExtResource("3_33chw")]
+position = Vector2(282, 387)
+rotation = -3.13233
+
+[node name="HackHexagon5" parent="." instance=ExtResource("4_bxneo")]
+position = Vector2(282, 200)
+rotation = -4.18422
+
+[node name="HackHexagon6" parent="." instance=ExtResource("5_anb8d")]
+position = Vector2(121, 294)
+rotation = -4.16877
+
+[node name="HackHexagon7" parent="." instance=ExtResource("6_rtpbo")]
+position = Vector2(121, 480)
+rotation = -5.20775
