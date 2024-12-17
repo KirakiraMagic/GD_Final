@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://pnteihoiggwc"]
+
+[ext_resource type="Script" path="res://security_camera.gd" id="1_4oe25"]
+[ext_resource type="Texture2D" uid="uid://3bumfrtuol8f" path="res://Enemies/securityCamera1.png" id="2_oh2i7"]
+[ext_resource type="Texture2D" uid="uid://rp0n7dnnc208" path="res://Enemies/light_conepaint.png" id="3_rtwr1"]
+
+[node name="SecurityCamera" type="Node2D"]
+script = ExtResource("1_4oe25")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -822.0
+offset_right = 809.0
+offset_bottom = 980.0
+color = Color(0.393086, 0.393086, 0.393085, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_oh2i7")
+offset = Vector2(4.91, 21.68)
+hframes = 3
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+collision_mask = 3
+
+[node name="DetectionArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DetectionArea"]
+polygon = PackedVector2Array(-379, 505, -2, 24, 396, 517, 395, 721, 299, 809, -201, 822, -403, 699)
+
+[node name="PointLight2D" type="PointLight2D" parent="DetectionArea"]
+shadow_enabled = true
+texture = ExtResource("3_rtwr1")
+offset = Vector2(0, 424.64)
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

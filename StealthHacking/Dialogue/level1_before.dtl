@@ -1,0 +1,11 @@
+[signal arg="disable_player"]
+Vanessa: This looks like where Morris said he was. 
+Vanessa: Be careful about the security cameras.
+Vanessa: If you're in their sight too long bugs will keep coming up.
+[signal arg="pan_camera"]
+Vanessa: Morris is over there. He's been infected pretty badly
+Vanessa: When you try and cure him, make sure to come from behind
+Vanessa: He'll attack you if he can see you so you have to position yourself right.
+Vanessa: Good luck!
+[signal arg="pan_camera_back"]
+[signal arg="enable_player"]

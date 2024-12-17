@@ -65,15 +65,10 @@ func _physics_process(delta):
 		sprite.play("dash")
 		var collison = move_and_collide(velocity * delta)
 		if collison and can_see:
-			for body in hit_area.get_overlapping_bodies():
-				if body.is_in_group("player"):
-					sprite.play("attack")
-					after_attack = true
-					body.hit()
-			#if collison.get_collider().is_in_group("player"):
-			#	sprite.play("attack")
-			#	after_attack = true
-			#	collison.get_collider().hit()
+			if collison.get_collider().is_in_group("player"):
+				sprite.play("attack")
+				after_attack = true
+				collison.get_collider().hit()
 
 	elif !after_attack and can_see and dash_timeout <= -0.4:
 		dash_direction = global_position.direction_to(target.global_position - Vector2(0, 100)).normalized()

@@ -6,7 +6,8 @@ extends CanvasLayer
 @onready var small_hacking_puzzle_4 = preload("res://small_hacking_puzzle_4.tscn")
 @onready var medium_hacking_puzzle_1 = preload("res://medium_hacking_puzzle_1.tscn")
 @onready var medium_hacking_puzzle_2 = preload("res://medium_hacking_puzzle_2.tscn")
-@export var thing : Node2D
+
+@export var things: Array[Node2D]
 
 var puzzles
 var puzzle_locations
@@ -22,7 +23,7 @@ var wait_timer = 0.0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if thing:
+	for thing in things:
 		if thing.can_see:
 			wait_timer += delta
 	if wait_timer > wait_time:
