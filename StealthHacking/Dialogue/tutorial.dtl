@@ -1,0 +1,11 @@
+[signal arg="disable_player"]
+join Vanessa (MouthClosed) center [animation="Instant In"]
+Vanessa (MouthOpen): S-7, you’re awake!
+Vanessa: You may be a little woozy right now.
+Vanessa: The whole facility is in lockdown.
+Vanessa: The infection has breached containment, and I believe you’ve been infected.
+Vanessa: But you’re a robot. I think you can keep it at bay.
+[signal arg="puzzle"]
+Vanessa: Solve the bugs that pop up on your screen to quell the infection
+Vanessa: Click the grey hexagons to rotate them. Use them to make a path between all the green hexagons.
+Vanessa: Solve it quick, you lose health gradually as long as it's there.

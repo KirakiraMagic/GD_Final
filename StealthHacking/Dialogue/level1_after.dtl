@@ -1,0 +1,10 @@
+[signal arg="disable_player"]
+morris:Blegh… my mouth still feels like it's full of feathers.
+s-7:Are you and your little bird friend alright?
+dewberry:* affirmative chirp *
+morris:Fine… thank you.
+morris:I’m going to work on getting our security systems online.
+morris:Charlotte should be in the next room.
+morris:But I doubt she’s held out against the infection.
+dewberry:* goodbye chirp *
+[signal arg="enable_player"]

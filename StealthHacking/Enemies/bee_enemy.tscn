@@ -1,0 +1,174 @@
+[gd_scene load_steps=22 format=3 uid="uid://btemqbl3lbu0s"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_4xxvb"]
+[ext_resource type="Texture2D" uid="uid://b2qoj1kxgnja" path="res://Enemies/beeEnemySpriteSheet.png" id="2_vltyp"]
+[ext_resource type="Script" path="res://interactable.gd" id="3_ojlh8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xou0q"]
+radius = 53.0
+height = 168.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uo58d"]
+atlas = ExtResource("2_vltyp")
+region = Rect2(0, 209, 212, 209)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbo31"]
+atlas = ExtResource("2_vltyp")
+region = Rect2(212, 209, 212, 209)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67seu"]
+atlas = ExtResource("2_vltyp")
+region = Rect2(424, 209, 212, 209)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yg03w"]
+atlas = ExtResource("2_vltyp")
+region = Rect2(0, 627, 212, 209)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gm8w"]
+atlas = ExtResource("2_vltyp")
+region = Rect2(0, 0, 212, 209)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4adv"]
+atlas = ExtResource("2_vltyp")
+region = Rect2(212, 0, 212, 209)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4c40"]
+atlas = ExtResource("2_vltyp")
+region = Rect2(424, 0, 212, 209)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bimh"]
+atlas = ExtResource("2_vltyp")
+region = Rect2(636, 0, 212, 209)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xq8fg"]
+atlas = ExtResource("2_vltyp")
+region = Rect2(0, 418, 212, 209)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ed85a"]
+atlas = ExtResource("2_vltyp")
+region = Rect2(0, 0, 212, 209)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qg0m"]
+atlas = ExtResource("2_vltyp")
+region = Rect2(212, 0, 212, 209)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2wr6"]
+atlas = ExtResource("2_vltyp")
+region = Rect2(424, 0, 212, 209)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7fx2"]
+atlas = ExtResource("2_vltyp")
+region = Rect2(636, 0, 212, 209)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_han0n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uo58d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbo31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67seu")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yg03w")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gm8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4adv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4c40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bimh")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_xq8fg")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ed85a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qg0m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2wr6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7fx2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o7t7g"]
+radius = 91.0
+height = 216.0
+
+[sub_resource type="Gradient" id="Gradient_6lpjg"]
+offsets = PackedFloat32Array(0, 0.788214, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.019337, 0.019337, 0.019337, 1, 0.019337, 0.019337, 0.019337, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gwqi1"]
+gradient = SubResource("Gradient_6lpjg")
+width = 500
+height = 500
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="BeeEnemy" type="CharacterBody2D" groups=["enemy"]]
+motion_mode = 1
+wall_min_slide_angle = 0.174533
+script = ExtResource("1_4xxvb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_xou0q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_han0n")
+animation = &"attack"
+frame_progress = 0.715719
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+collision_mask = 3
+
+[node name="HitArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("3_ojlh8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_o7t7g")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_gwqi1")
+texture_scale = 2.0

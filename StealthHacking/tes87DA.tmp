@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dplthjawbhygf"]
+
+[ext_resource type="PackedScene" path="res://small_hacking_puzzle_1.tscn" id="1_oixt7"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="SmallHackingPuzzle1" parent="." instance=ExtResource("1_oixt7")]
+position = Vector2(79, 34)
+scale = Vector2(0.715, 0.715)

@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=11 format=3 uid="uid://bm4nrg6wwmgw7"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_0bevn"]
+[ext_resource type="PackedScene" uid="uid://dm3ieesyk6810" path="res://Dialogue/styles/CustomCoworkerStyle/custom_coworker_style.tscn" id="1_370lc"]
+[ext_resource type="Script" path="res://Dialogue/styles/CustomCoworkerStyle/default_layout_base.gd" id="2_bmcor"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="2_xqd6d"]
+[ext_resource type="PackedScene" uid="uid://d2it0xiap3gnt" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble_layer.tscn" id="3_x0gbl"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="4_mntbe"]
+
+[sub_resource type="PackedScene" id="PackedScene_evack"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("DefaultLayoutBase", "CanvasLayer", "script"),
+"node_count": 1,
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 1, 2, 0, 0),
+"variants": [ExtResource("2_bmcor")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_txeob"]
+script = ExtResource("1_0bevn")
+scene = SubResource("PackedScene_evack")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_wpdfk"]
+script = ExtResource("1_0bevn")
+scene = ExtResource("2_xqd6d")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_2itbi"]
+script = ExtResource("1_0bevn")
+scene = ExtResource("3_x0gbl")
+overrides = {}
+
+[resource]
+script = ExtResource("4_mntbe")
+name = "coworker_style"
+layer_list = Array[String](["10", "11"])
+layer_info = {
+"": SubResource("Resource_txeob"),
+"10": SubResource("Resource_wpdfk"),
+"11": SubResource("Resource_2itbi")
+}
+base_scene = ExtResource("1_370lc")
+base_overrides = {}
+layers = Array[ExtResource("1_0bevn")]([])
+metadata/_latest_layer = ""

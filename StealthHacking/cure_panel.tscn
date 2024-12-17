@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bltiel5v67yx4"]
+
+[ext_resource type="Script" path="res://cure_panel.gd" id="1_r7k81"]
+[ext_resource type="Texture2D" uid="uid://d15skgaatr780" path="res://tilemapGameDev.png" id="2_5oihg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rvjdi"]
+radius = 25.0
+
+[node name="CurePanel" type="Area2D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_r7k81")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_5oihg")
+region_enabled = true
+region_rect = Rect2(49.6555, 150, 50.3445, 50.023)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rvjdi")

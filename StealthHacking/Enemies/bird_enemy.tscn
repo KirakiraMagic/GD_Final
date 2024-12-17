@@ -1,0 +1,163 @@
+[gd_scene load_steps=19 format=3 uid="uid://djdfdsrqdgjny"]
+
+[ext_resource type="Script" path="res://Enemies/bird_enemy.gd" id="1_lxve2"]
+[ext_resource type="Texture2D" uid="uid://ga7uuk288gj0" path="res://Enemies/birdEnemySpriteSheet.png" id="2_3matq"]
+[ext_resource type="Script" path="res://interactable.gd" id="3_h0pyv"]
+[ext_resource type="Texture2D" uid="uid://rp0n7dnnc208" path="res://Enemies/light_conepaint.png" id="4_t0kab"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xou0q"]
+radius = 48.0
+height = 96.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ad6ti"]
+atlas = ExtResource("2_3matq")
+region = Rect2(0, 416, 208, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_feqrq"]
+atlas = ExtResource("2_3matq")
+region = Rect2(208, 416, 208, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2exl"]
+atlas = ExtResource("2_3matq")
+region = Rect2(416, 416, 208, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8bfj"]
+atlas = ExtResource("2_3matq")
+region = Rect2(0, 624, 208, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vucis"]
+atlas = ExtResource("2_3matq")
+region = Rect2(0, 0, 208, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxpqe"]
+atlas = ExtResource("2_3matq")
+region = Rect2(208, 0, 208, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00d0k"]
+atlas = ExtResource("2_3matq")
+region = Rect2(416, 0, 208, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1tct"]
+atlas = ExtResource("2_3matq")
+region = Rect2(624, 0, 208, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olxqw"]
+atlas = ExtResource("2_3matq")
+region = Rect2(0, 832, 208, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1uvan"]
+atlas = ExtResource("2_3matq")
+region = Rect2(0, 208, 208, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvcaf"]
+atlas = ExtResource("2_3matq")
+region = Rect2(208, 208, 208, 208)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_han0n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ad6ti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_feqrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2exl")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8bfj")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vucis")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxpqe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00d0k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1tct")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olxqw")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1uvan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvcaf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o7t7g"]
+radius = 61.0
+height = 194.0
+
+[node name="BirdEnemy" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 2
+collision_mask = 32771
+motion_mode = 1
+wall_min_slide_angle = 0.436332
+script = ExtResource("1_lxve2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_xou0q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_han0n")
+animation = &"idle"
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+collision_mask = 3
+
+[node name="HitArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 6
+script = ExtResource("3_h0pyv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_o7t7g")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DetectionArea"]
+polygon = PackedVector2Array(-37, 168, -91, 701, -254, 933, -649, 761, -913, 351, -1125, -61, -795, -264, -144, -82, -9, -33)
+
+[node name="PointLight2D" type="PointLight2D" parent="DetectionArea"]
+rotation = 1.0472
+scale = Vector2(0.769665, 0.607657)
+shadow_enabled = true
+texture = ExtResource("4_t0kab")
+offset = Vector2(0, 800)
+texture_scale = 2.0
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

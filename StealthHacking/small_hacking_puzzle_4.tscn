@@ -1,35 +1,36 @@
-[gd_scene load_steps=7 format=3 uid="uid://2v20m0sq4xcm"]
+[gd_scene load_steps=7 format=3 uid="uid://d0w0esjtcfih4"]
 
-[ext_resource type="Script" path="res://hack_puzzle.gd" id="1_ju72f"]
-[ext_resource type="PackedScene" uid="uid://cx4r1b6pe4ujq" path="res://hacking_tiles/2prongStarter.tscn" id="1_jxsyu"]
-[ext_resource type="PackedScene" uid="uid://dma1ql16dfsrq" path="res://hacking_tiles/1prongStarter.tscn" id="2_3b0hx"]
-[ext_resource type="PackedScene" uid="uid://bxvkdrqbj2p42" path="res://hacking_tiles/2prong1.tscn" id="3_tkqfy"]
-[ext_resource type="PackedScene" uid="uid://dlurohq4uemjm" path="res://hacking_tiles/3prong1.tscn" id="4_c0bhw"]
-[ext_resource type="PackedScene" uid="uid://bulge0g4k81vg" path="res://hacking_tiles/3prong2.tscn" id="5_uyepk"]
+[ext_resource type="Script" path="res://hacking_tiles/scripts/hack_puzzle.gd" id="1_ju72f"]
+[ext_resource type="PackedScene" uid="uid://cx4r1b6pe4ujq" path="res://hacking_tiles/tiles/2prongStarter.tscn" id="1_jxsyu"]
+[ext_resource type="PackedScene" uid="uid://dma1ql16dfsrq" path="res://hacking_tiles/tiles/1prongStarter.tscn" id="2_3b0hx"]
+[ext_resource type="PackedScene" uid="uid://bxvkdrqbj2p42" path="res://hacking_tiles/tiles/2prong1.tscn" id="3_tkqfy"]
+[ext_resource type="PackedScene" uid="uid://dlurohq4uemjm" path="res://hacking_tiles/tiles/3prong1.tscn" id="4_c0bhw"]
+[ext_resource type="PackedScene" uid="uid://bulge0g4k81vg" path="res://hacking_tiles/tiles/3prong2.tscn" id="5_uyepk"]
 
 [node name="SmallHackingPuzzle4" type="Node2D"]
+rotation = 1.0472
 script = ExtResource("1_ju72f")
 
 [node name="HackHexagon" parent="." instance=ExtResource("1_jxsyu")]
-position = Vector2(159.934, 134.263)
+position = Vector2(222.035, -187.752)
 rotation = -0.000128352
 
 [node name="HackHexagon2" parent="." instance=ExtResource("2_3b0hx")]
-position = Vector2(322.934, 416.263)
+position = Vector2(385.035, 94.2477)
 rotation = -2.10287
 
 [node name="HackHexagon3" parent="." instance=ExtResource("2_3b0hx")]
-position = Vector2(487.934, 508.263)
+position = Vector2(550.035, 186.248)
 rotation = 3.13656
 
 [node name="HackHexagon4" parent="." instance=ExtResource("3_tkqfy")]
-position = Vector2(160.934, 320.263)
+position = Vector2(223.035, -1.75238)
 rotation = 1.05485
 
 [node name="HackHexagon5" parent="." instance=ExtResource("4_c0bhw")]
-position = Vector2(323.934, 227.263)
+position = Vector2(386.035, -94.7523)
 rotation = 2.09647
 
 [node name="HackHexagon6" parent="." instance=ExtResource("5_uyepk")]
-position = Vector2(485.934, 320.263)
+position = Vector2(548.035, -1.75235)
 rotation = 4.17452

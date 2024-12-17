@@ -1,0 +1,10 @@
+join Vanessa center [animation="Instant In"]
+Vanessa: There, you’re feeling better already.
+Vanessa: I’m in my office, and we should meet.
+Vanessa: But first, I need you to cure some of your coworkers.
+Vanessa: We need to get these facilities up and running to beat this infection.
+[signal arg="pan_camera"]
+Vanessa: Do you see that panel on the wall?
+Vanessa: Use WASD to move towards the panel and press F to interact with it.
+[signal arg="pan_camera_back"]
+[signal arg="enable_player"]

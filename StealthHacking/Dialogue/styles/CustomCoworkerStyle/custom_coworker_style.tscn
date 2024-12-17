@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm3ieesyk6810"]
+
+[ext_resource type="Script" path="res://Dialogue/styles/CustomCoworkerStyle/default_layout_base.gd" id="1_ifsho"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="2_3455s"]
+[ext_resource type="PackedScene" uid="uid://d2it0xiap3gnt" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble_layer.tscn" id="4_at0xx"]
+
+[node name="Custom" type="CanvasLayer"]
+script = ExtResource("1_ifsho")
+
+[node name="FullAdvanceInputLayer" parent="." instance=ExtResource("2_3455s")]
+apply_overrides_on_ready = true
+
+[node name="TextBubbleLayer" parent="." instance=ExtResource("4_at0xx")]
+apply_overrides_on_ready = true

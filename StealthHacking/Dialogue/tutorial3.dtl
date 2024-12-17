@@ -1,0 +1,10 @@
+join Vanessa center [animation="Instant In"]
+Vanessa: You’ll need three of these to cure one of your coworkers.
+Vanessa: They’re hidden in emergency panels all throughout the floors.
+Vanessa: Collect them and sneak behind your coworkers to administer them by pressing F
+Vanessa: I'll tell you more in a bit. There should be a door ahead of you going to the next floor
+Vanessa: But to get to it looks like you need to go through there
+Vanessa: ... but it seems a little cramped. Press CTRL to crouch down.
+Vanessa: I'll see you on the next floor.
+Vanessa: Go on! I’ll be with you all the way. Good luck S-7!
+[signal arg="enable_player"]
