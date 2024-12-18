@@ -37,7 +37,7 @@ Concept art for the player character <br>
 Nailing the player character concept was key, considering we wanted to base the style of the rest of our game around the energy the player gave off. Several concepts were created before we decided on a particular design. <br>
 
 ![image](https://github.com/user-attachments/assets/b233bcb2-8991-4186-96cb-b004cdb86c40)
-![image](https://github.com/user-attachments/assets/63548a9e-9c35-4057-b196-c11d14948ced)
+![image](https://github.com/user-attachments/assets/37188cd0-7d61-469f-9fd1-9e2213a8d409)
 ![image](https://github.com/user-attachments/assets/2aeebbe8-167a-4408-8aee-78d3adda12dd)
 ![image](https://github.com/user-attachments/assets/b3320c88-1272-4a84-973d-46268bd82843)
 ![image](https://github.com/user-attachments/assets/59e7e6b8-dab6-4a63-ba89-0a38f9726a2b)
