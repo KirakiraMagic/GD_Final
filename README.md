@@ -40,7 +40,7 @@ Nailing the player character concept was key, considering we wanted to base the 
 ![image](https://github.com/user-attachments/assets/37188cd0-7d61-469f-9fd1-9e2213a8d409)
 ![image](https://github.com/user-attachments/assets/2aeebbe8-167a-4408-8aee-78d3adda12dd)
 ![image](https://github.com/user-attachments/assets/b3320c88-1272-4a84-973d-46268bd82843)
-![image](https://github.com/user-attachments/assets/59e7e6b8-dab6-4a63-ba89-0a38f9726a2b)
+![image](https://github.com/user-attachments/assets/76e5aaa0-1342-4033-9437-2ecc50bf7050)
 ![image](https://github.com/user-attachments/assets/3a3c3557-c871-490b-b306-231880e7a298)
 
 We decided that we liked the business suit theme, and further iterated upon that concept. <br>
